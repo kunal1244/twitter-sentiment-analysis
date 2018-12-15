@@ -135,7 +135,7 @@ def tokenize_data(X_raw, Y_raw):
 def load_data_set():
     X = []
     Y = []
-    with open(TRAIN_DATA_FILE, "rb") as f:
+    with open(TRAIN_DATA_FILE, "r") as f:
         reader = csv.reader(f, delimiter=",")
         for i, line in enumerate(reader):
             is_positive = line[1]=="1"
